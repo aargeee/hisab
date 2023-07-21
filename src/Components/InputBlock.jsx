@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "../CSS/InputBlock.module.css";
 import NamesContext from "../Context/NamesContext";
-import { keyboardImplementationWrapper } from "@testing-library/user-event/dist/keyboard";
-import { findAllByDisplayValue } from "@testing-library/react";
 
 function InputBlock() {
   const context = useContext(NamesContext);
@@ -13,37 +11,41 @@ function InputBlock() {
     console.log(context.user1Name, context.user2Name);
   });
   return (
-    <div>
-      <div>
-        <h1> Welcome to Hisaab! </h1>
+    <div className={styles.InputBlock}>
+      <div className={styles.heading}>
+        <div> Welcome to Hisaab! </div>
       </div>
 
-      <div>
-        <div>User-1 Name</div>
-        <input
-          type="text"
-          value={user1Name}
-          placeholder="First user name"
-          onChange={(event) => {
-            setUser1Name(event.target.value);
-          }}
-        />
+      <div className={styles.userwrapper}>
+        <div className={styles.user1}>
+          <div>User 1 Name</div>
+          <input
+            type="text"
+            value={user1Name}
+            placeholder="Enter a name"
+            onChange={(event) => {
+              setUser1Name(event.target.value);
+            }}
+          />
+        </div>
+
+        <div className={styles.user2}>
+          <div>User 2 Name</div>
+          <input
+            type="text"
+            value={user2Name}
+            placeholder="Enter a name"
+            onChange={(event) => {
+              setUser2Name(event.target.value);
+            }}
+          />
+        </div>
       </div>
 
-      <div>
-        <div>User-2 Name</div>
-        <input
-          type="text"
-          value={user2Name}
-          placeholder="Second user name"
-          onChange={(event) => {
-            setUser2Name(event.target.value);
-          }}
-        />
-      </div>
 
-      <div>
+      <div className={styles.btncontainer}>
         <button
+          className={styles.gobtn}
           onClick={() => {
             context.setUser1Name(user1Name);
             context.setUser2Name(user2Name);

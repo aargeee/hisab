@@ -1,5 +1,6 @@
 import IntroPage from "./Components/IntroPage";
-import {NamesContext , NameState} from "./Context/NamesContext";
+import {NameState} from "./Context/NamesContext";
+import "./App.css"
 
 function App() {
   return (

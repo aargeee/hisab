@@ -1,0 +1,15 @@
+:root {
+    --primary : pink;
+    --secondary : rgb(216, 66, 91);
+    --secondary-25: rgba(216, 66, 91, 0.25);
+    --background: rgb(253, 232, 236);
+}
+
+.IntroPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
