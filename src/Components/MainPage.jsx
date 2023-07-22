@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 
 import styles from "../CSS/MainPage.module.css"
 import { AnimatePresence, motion } from "framer-motion";
+import { ListState } from "../Context/ListContext";
 
 function MainPage(props) {
   return (
@@ -24,8 +25,10 @@ function MainPage(props) {
         </div>
 
         <div className={styles.MainSection}>
-          <OutputSection> </OutputSection>
-          <InputSection> </InputSection>
+          <ListState>
+              <OutputSection> </OutputSection>
+              <InputSection> </InputSection>
+          </ListState>
         </div>
 
       </motion.div>
