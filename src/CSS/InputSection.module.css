@@ -1,0 +1,10 @@
+.InputSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.User1, .User2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

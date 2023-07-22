@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
   const [page,setPage] = useState("Intro") ;
-  
+
   return (
     <div className="App">
       <NameState>
