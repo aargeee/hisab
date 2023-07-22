@@ -9,15 +9,15 @@ function InputSection(props) {
       <div className={styles.User1}>
         <div className="Header"></div>
 
-        <ListContainer> </ListContainer>
-        <InputPanel> </InputPanel>
+        <ListContainer user="1"> </ListContainer>
+        <InputPanel user="1"> </InputPanel>
       </div>
 
       <div className={styles.User2}>
         <div className="Header"></div>
 
-        <ListContainer> </ListContainer>
-        <InputPanel> </InputPanel>
+        <ListContainer user="2"> </ListContainer>
+        <InputPanel user="2"> </InputPanel>
       </div>
     </div>
   );
