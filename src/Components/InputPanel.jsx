@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import ListContext from "../Context/ListContext";
 
+
 function InputPanel(props) {
   const [newItem, setNewItem] = useState({
     amount: "",
@@ -8,6 +9,7 @@ function InputPanel(props) {
   });
 
   const context = useContext(ListContext);
+ 
 
   return (
     <div>
@@ -55,6 +57,7 @@ function InputPanel(props) {
               context.setUser1List((prev) => {
                 return [...prev, newItem];
               });
+
               setNewItem({
                 amount: "",
                 category: "Other",
