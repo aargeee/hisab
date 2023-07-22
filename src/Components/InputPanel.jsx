@@ -46,7 +46,7 @@ function InputPanel(props) {
           <option value={"Food"}>     😋 </option>
           <option value={"Travel"}>   😎 </option>
           <option value={"Shopping"}> 😍 </option>
-          <option value={"Other"}>    😅 </option>
+          <option value={"Other"}>    🤔 </option>
         </select>
       </div>
 

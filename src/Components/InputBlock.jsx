@@ -7,9 +7,6 @@ function InputBlock(props) {
   const [user1Name, setUser1Name] = useState("");
   const [user2Name, setUser2Name] = useState("");
 
-  useEffect(() => {
-    console.log(context.user1Name, context.user2Name);
-  });
   return (
     <div className={styles.InputBlock}>
       <div className={styles.heading}>
