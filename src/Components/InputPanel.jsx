@@ -3,6 +3,7 @@ import ListContext from "../Context/ListContext";
 import styles from "../CSS/InputPanel.module.css";
 import CheckIcon from '@mui/icons-material/Check';
 
+
 function InputPanel(props) {
   const [newItem, setNewItem] = useState({
     amount: "",
@@ -10,6 +11,7 @@ function InputPanel(props) {
   });
 
   const context = useContext(ListContext);
+ 
 
   return (
     <React.Fragment>
