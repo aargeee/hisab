@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <NameState>
          {page==="Intro" && <IntroPage setPage={setPage}> </IntroPage>}
-         {page==="Main" && <MainPage> </MainPage> }
+         {page==="Main" && <MainPage setPage={setPage}> </MainPage> }
          
       </NameState>
     </div> 

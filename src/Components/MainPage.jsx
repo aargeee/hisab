@@ -1,11 +1,26 @@
 import React from "react";
-import InputBlock from "./InputBlock";
+import InputSection from "./InputSection";
+import OutputSection from "./OutputSection";
 
 
-function MainPage() {
+
+function MainPage(props) {
   return (
-    <div >
-       hellooo
+    <div>
+        <div className="Header">
+            <div>
+                <button onClick={()=> (props.setPage("Intro")) }> back </button>
+            </div>
+
+            <div>
+                Hisaab
+            </div>
+
+        </div>
+        
+        <OutputSection> </OutputSection>
+        <InputSection> </InputSection>
+        
     </div>
   );
 }
