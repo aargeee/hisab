@@ -2,10 +2,10 @@ import React from "react";
 import InputBlock from "./InputBlock";
 import style from "../CSS/IntroPage.module.css"
 
-function IntroPage() {
+function IntroPage(props) {
   return (
     <div className={style.IntroPage}>
-      <InputBlock />
+      <InputBlock setPage={props.setPage} />
     </div>
   );
 }
