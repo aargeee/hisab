@@ -1,10 +1,4 @@
-import React, { useContext } from "react";
-import NamesContext from "../Context/NamesContext";
-
-
-
 function calculateCategoryAmount(setData, list , totalExpense) {
-  {
     list.map((item) => {
       setData((prev) => {
         if (item.category == "Food") {
@@ -51,7 +45,6 @@ function calculateCategoryAmount(setData, list , totalExpense) {
         }
       });
     });
-  }
 }
 
 function getCategoryAmount(setData, list1, list2) {
