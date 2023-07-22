@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import ListContext from "../Context/ListContext";
+import styles from "../CSS/InputPanel.module.css";
+import CheckIcon from '@mui/icons-material/Check';
 
 
 function InputPanel(props) {
@@ -12,11 +14,10 @@ function InputPanel(props) {
  
 
   return (
-    <div>
-      <div className="Amount">
+    <React.Fragment>
+      <div className={styles.Amount}>
         <input
           placeholder="Amount"
-          type="number"
           value={newItem.amount}
           onChange={(event) => {
             setNewItem((prevValue) => {
@@ -29,9 +30,8 @@ function InputPanel(props) {
         />
       </div>
 
-      <div className="Category">
-        <label> Category </label>
-
+      <div className={styles.Category}>
+      <div> Category </div>
         <select
           value={newItem.category}
           onChange={(event) => {
@@ -43,41 +43,36 @@ function InputPanel(props) {
             });
           }}
         >
-          <option> Food </option>
-          <option> Travel </option>
-          <option> Shopping </option>
-          <option> Other </option>
+          <option value={"Food"}>     😋 </option>
+          <option value={"Travel"}>   😎 </option>
+          <option value={"Shopping"}> 😍 </option>
+          <option value={"Other"}>    😅 </option>
         </select>
       </div>
 
-      <div className="SubmitBtn">
+      <div className={styles.SubmitBtn}>
         <button
           onClick={() => {
-            if (props.user == "1") {
+            if (props.user === "1") {
               context.setUser1List((prev) => {
                 return [...prev, newItem];
-              });
-
-              setNewItem({
-                amount: "",
-                category: "Other",
               });
             } else {
               context.setUser2List((prev) => {
                 return [...prev, newItem];
               });
-              setNewItem({
-                amount: "",
-                category: "Other",
-              });
             }
+            setNewItem(prev => {
+              return {
+              amount: "",
+              category: prev.category,
+            }});
           }}
         >
-          {" "}
-          Submit
+          <CheckIcon />
         </button>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

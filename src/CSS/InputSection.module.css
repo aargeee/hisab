@@ -1,10 +1,41 @@
 .InputSection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 10px;
+    border: 3px solid var(--secondary);
 }
 
 .User1, .User2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    background-color: var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.User1 {
+    border-right: 5px solid var(--primary);
+}
+
+.User2 {
+    border-left: 5px solid var(--primary);
+}
+
+.heading {
+    height: fit-content;
+    background-color: var(--primary);
+    padding: 10px;
+    text-align: center;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.InputPanel {
+    height: fit-content;
+    background-color: var(--primary);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
