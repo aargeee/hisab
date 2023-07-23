@@ -33,7 +33,7 @@ function OutputSection(props) {
     <div className={styles.OutputSection}>
       <Piechart />
       <div className={styles.Message}>
-        {personStatus.debter == "p1" ? context.user1Name : context.user2Name} owes Rs. {toPay} to {personStatus.lender == "p2" ? context.user2Name : context.user1Name}
+        {personStatus.debter === "p1" ? context.user1Name : context.user2Name} owes Rs. {toPay} to {personStatus.lender === "p2" ? context.user2Name : context.user1Name}
       </div>
     </div>
   );
