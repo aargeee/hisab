@@ -17,6 +17,27 @@ function InputPanel(props) {
     <React.Fragment>
       <div className={styles.Amount}>
         <input
+          onKeyDown={e => {
+            console.log(e.code)
+            if (e.code === "Enter" || e.code === "NumpadEnter")
+            {
+              if (props.user === "1") {
+                context.setUser1List((prev) => {
+                  return [...prev, newItem];
+                });
+              } else {
+                context.setUser2List((prev) => {
+                  return [...prev, newItem];
+                });
+              }
+              setNewItem(prev => {
+                return {
+                amount: "",
+                category: prev.category,
+              }});
+            }
+
+          }}
           placeholder="Amount"
           value={newItem.amount}
           onChange={(event) => {
