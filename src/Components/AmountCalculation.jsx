@@ -10,7 +10,7 @@ function getUserExpense(setExpense, list) {
 function toPay(p1Expense, p2Expense, setToPay, setPersonStatus) {
 
   if (p1Expense > p2Expense) {
-    setToPay(Number(p1Expense) - Number(p2Expense));
+    setToPay((Number(p1Expense) - Number(p2Expense))/2);
     setPersonStatus((prev) => {
       return {
         lender: "p1" ,
@@ -20,7 +20,7 @@ function toPay(p1Expense, p2Expense, setToPay, setPersonStatus) {
   }
 
   else if(p2Expense>p1Expense){
-    setToPay(Number(p2Expense) - Number(p1Expense));
+    setToPay((Number(p2Expense) - Number(p1Expense))/2);
     setPersonStatus((prev) => {
       return {
         lender: "p2" ,
