@@ -13,4 +13,5 @@
     overflow: hidden;
     /* background-color: aqua; */
     font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
 }

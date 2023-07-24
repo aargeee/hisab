@@ -9,10 +9,11 @@ import { ListState } from "../Context/ListContext";
 
 function MainPage(props) {
   return (
-    <AnimatePresence>
-      <motion.div className={styles.MainPage} initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+
+      <motion.div className={styles.MainPage} initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      exit={{ scale : 0 }}
+      transition={{ type: "Tween"}}>
         <div className={styles.Header}>
           <div className={styles.HeaderBtn}>
             <button onClick={() => (props.setPage("Intro"))}> <HomeIcon /> </button>
@@ -32,7 +33,6 @@ function MainPage(props) {
         </div>
 
       </motion.div>
-    </AnimatePresence>
   );
 }
 
