@@ -21,6 +21,7 @@ function InputBlock(props) {
             onKeyDown={e => {
               if (e.code === "Enter" || e.code === "NumpadEnter") {
                 user2inpRef.current.focus()
+                // document.querySelector("#root > div > div > div > div.InputBlock_userwrapper__rxRq8 > div.InputBlock_user2__eBWNs > input[type=text]").focus()
               }
             }}
             type="text"
